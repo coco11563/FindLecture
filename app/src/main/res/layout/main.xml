@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.lectureinfo.mainBackground
+        android:id="@+id/rootbg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY" />
+
+    <com.lectureinfo.SlideMenu
+        android:id="@+id/slide_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include layout="@layout/slidemenu" />
+
+        <RelativeLayout
+            android:id="@id/line_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/xiaoyuan_title"
+                style="@style/default_title_rela" >
+
+                <ImageView
+                    android:id="@id/title_bar_menu_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_marginRight="3.0dip"
+                    android:layout_marginTop="3.0dip"
+                    android:background="@drawable/category"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/main_title_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/main_title"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@+id/main_title"
+                    android:text="@string/title_sub"
+                    android:textColor="#ff7b7b7b"
+                    android:textSize="13.0dip" />
+
+                <TextView
+                    android:id="@+id/main_title"
+                    style="@style/default_title_inf"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/title_bar_menu_btn"
+                    android:text="@string/title_activity_main"
+                    android:textColor="#ffff9900"
+                    android:textSize="30.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/xiaoyuan_title"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:paddingTop="5.0dip" >
+
+                <ImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="75.0dip"
+                    android:layout_height="75.0dip"
+                    android:background="@drawable/login_02"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/login_01" />
+
+                <RelativeLayout
+                    android:id="@+id/login_show"
+                    style="@style/default_wrap_wrap"
+                    android:layout_alignBottom="@+id/user_img"
+                    android:layout_toRightOf="@+id/user_img"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/txt_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="登录"
+                        android:textColor="@color/mainactivity_text_userinf"
+                        android:textSize="18.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rela_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/user_img"
+                    android:layout_alignParentRight="true"
+                    android:background="#00000000" >
+
+                    <TextView
+                        android:id="@+id/inf_fensi"
+                        android:layout_width="40.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/inf_fensi_num"
+                        android:layout_marginRight="1.0dip"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="@string/user_inf_myfabu"
+                        android:textColor="@color/mainactivity_text_userinf" />
+
+                    <TextView
+                        android:id="@+id/inf_fensi_num"
+                        android:layout_width="40.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1.0dip"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/mainactivity_text_num" />
+
+                    <TextView
+                        android:id="@+id/inf_fabu"
+                        android:layout_width="40.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/inf_fabu_num"
+                        android:layout_toRightOf="@+id/inf_fensi"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="@string/user_inf_myguanzhu"
+                        android:textColor="@color/mainactivity_text_userinf" />
+
+                    <TextView
+                        android:id="@+id/inf_fabu_num"
+                        android:layout_width="40.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/inf_fensi"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/mainactivity_text_num" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela_login"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:paddingTop="5.0dip" >
+
+                <ImageButton
+                    android:id="@+id/btn_todaytopic"
+                    android:layout_width="145dip"
+                    android:layout_height="145dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/todaytopic" />
+
+                <ImageButton
+                    android:id="@+id/btn_benxiao"
+                    android:layout_width="145dip"
+                    android:layout_height="145dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/benxiao" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/line3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:paddingTop="10.0dip" >
+
+                <ImageButton
+                    android:id="@+id/btn_myinfo"
+                    android:layout_width="0.0dip"
+                    android:layout_height="145dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/my" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="145dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_weight="1.0" >
+
+                    <ImageButton
+                        android:id="@+id/btn_search"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/mingxiao" />
+
+                    <ImageButton
+                        android:id="@id/btn_wangzhan"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70.0dip"
+                        android:layout_below="@+id/btn_search"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/wangzhan" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_location"
+                android:layout_width="fill_parent"
+                android:layout_height="80.0dip"
+                android:layout_below="@id/line3"
+                android:layout_margin="10.0dip" 
+                android:background="@drawable/baidu_location"/>
+        </RelativeLayout>
+    </com.lectureinfo.SlideMenu>
+
+</RelativeLayout>

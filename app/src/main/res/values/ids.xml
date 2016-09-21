@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="line_title" type="id">false</item>
+    <item name="line_all" type="id">false</item>
+    <item name="slide_menu" type="id">false</item>
+    <item name="main_exit" type="id">false</item>
+    <item name="main_title" type="id">false</item>
+    <item name="main_title_sub" type="id">false</item>
+    <item name="line1" type="id">false</item>
+    <item name="line2" type="id">false</item>
+    <item name="line3" type="id">false</item>
+    <item name="mingxiao" type="id">false</item>
+    <item name="benxiao" type="id">false</item>
+    <item name="my_main" type="id">false</item>
+    <item name="search" type="id">false</item>
+    <item name="blank_main" type="id">false</item>
+    <item name="list1" type="id">false</item>
+    <item name="btn_search" type="id">false</item>
+    <item name="btn_wangzhan" type="id">false</item>
+    <item name="title_bar_menu_btn" type="id">false</item>
+    <item name="inf_fensi" type="id">false</item>
+    
+
+</resources>
